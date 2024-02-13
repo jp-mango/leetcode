@@ -11,5 +11,5 @@ func main() {
 	target := 9
 	result := TwoSum(nums, target)
 	fmt.Printf("[%v]", strings.Trim(strings.Join(strings.Fields(fmt.Sprint(result)), ","), "[]"))
-	fmt.Println("\n")
+	fmt.Println()
 }
