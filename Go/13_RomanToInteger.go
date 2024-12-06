@@ -1,7 +1,10 @@
 package main
 
+/*
+* https://leetcode.com/problems/roman-to-integer/description/
+ */
 func romanToInt(s string) int {
-	RomanNumerals := map[string]int{
+	romanNumerals := map[string]int{
 		"I": 1,
 		"V": 5,
 		"X": 10,
@@ -13,9 +16,13 @@ func romanToInt(s string) int {
 
 	var result int
 
-	for _, v := range s {
-		//TODO: add logic for subtracting nums
-		result += RomanNumerals[string(v)]
+	for i, v := range s {
+		result += romanNumerals[string(v)]
+		if i != 0 {
+			if romanNumerals[string(s[i-1])] < romanNumerals[string(v)] {
+				result -= 2 * romanNumerals[string(s[i-1])]
+			}
+		}
 	}
 
 	return result

@@ -35,7 +35,7 @@ func main() {
 	fmt.Printf("In the number list: %v, the number %d %s index %d\n", numList, num, phrase, i)
 
 	fmt.Println("\n- 13. Given a roman numeral, convert it to an integer.")
-	numerals := "IV"
-	fmt.Printf("%s = %d", numerals, romanToInt(numerals))
+	numerals := "MCMXCVII"
+	fmt.Printf("%s = %d\n", numerals, romanToInt(numerals))
 
 }
